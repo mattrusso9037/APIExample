@@ -10,7 +10,6 @@ function App() {
     const [page, setPage] = useState(1);
 
     useEffect(() => {
-        console.log('Component mounted');
         getSpecies(page);
     }, []);
 
@@ -21,9 +20,7 @@ function App() {
     function getSpecies(nextPage) {
         ApiService.getSpeciesByPage(nextPage).then((data) => {
             setSpecies(data.results);
-            console.log('1');
         });
-        console.log('2');
     }
 
     function onNextClick() {
