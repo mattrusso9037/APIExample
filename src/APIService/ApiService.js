@@ -6,14 +6,12 @@ export class ApiService {
     }
 
     /**
-     * Get's all stqar wars species
+     * Get star wars species in increments of 10
      */
     static async getSpeciesByPage(page = '1') {
         try {
-            const response = await fetch(`${config.BASE_URL}/species?page=${page}&limit=10`)
-
+            const response = await fetch(`${config.BASE_URL}/species?page=${page}&limit=10`);
             const data = await response.json();
-            console.log('data', data);
 
             return data;
         } catch (e) {
