@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-This project is an example of consumng a third party API with React. It was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is an example of consuming a third party API with React. It was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
