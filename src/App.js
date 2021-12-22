@@ -1,16 +1,19 @@
 import logo from './logo.svg';
 import './App.css';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { ApiService } from './APIService/ApiService';
 import { SpeciesContainer } from './components/Species';
+import { FilmController } from './controllers/filmController';
 const PAGE_LOWER_LIMIT = 1;
 
 function App() {
     const [species, setSpecies] = useState([]);
     const [page, setPage] = useState(1);
+    const filmController = useRef(new FilmController()).current;
 
     useEffect(() => {
         getSpecies(page);
+        filmController.getParsedFilms();
     }, []);
 
     useEffect(() => {

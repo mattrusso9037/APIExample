@@ -19,4 +19,16 @@ export class ApiService {
             return e;
         }
     }
+
+    static async getAllFilms() {
+        try {
+            const response = await fetch(`${config.BASE_URL}/films`);
+            const data = await response.json();
+
+            return data;
+        } catch (e) {
+            console.error(e);
+            return e;
+        }
+    }
 }
